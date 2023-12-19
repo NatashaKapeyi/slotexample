@@ -35,17 +35,28 @@
           </div>
         </template>
       </Card>
+      <Button>
+        <template #Btn>
+           Hello
+        </template>
+        <template #Click>
+          click <img class="img-fluid" src="https://picsum.photos/id/7/4728/3168.jpg" alt="image 1" loading="lazy" />
+        </template>
+      </Button>
     </div>
   </div>
 </template>
 
 <script>
+import Button from "./components/Button.vue";
 import Card from "./components/Card.vue";
+
 
 export default {
   name: "App",
   components: {
-    Card,
+    Card, 
+    Button,
   },
 };
 </script>
@@ -58,5 +69,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+img{
+  width: 30px;
 }
 </style>
